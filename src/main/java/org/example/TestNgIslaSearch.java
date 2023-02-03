@@ -14,7 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class IestNGislaSearch {
+public class TestNgIslaSearch {
 
     private WebDriver driver;
 
