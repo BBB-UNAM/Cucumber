@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/features",
         glue = {"seleniumGlueCode"},
-        tags = "not @ignore"
+        tags = "not @ignore",
+        plugin = { "pretty","html:target/cucumber-reports" }
 )
 public class TestRunner {
 }
