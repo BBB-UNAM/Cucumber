@@ -5,6 +5,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh "mvn -D clean test"
+                //this part was changed
             }
 
             post {
