@@ -28,20 +28,5 @@ pipeline {
 
             }
         }
-
-        stage('Generate HTML report') {
-            step  {
-             cucumber buildStatus: 'UNSTABLE',
-                      reportTitle: 'My report',
-                      fileIncludePattern: 'target/cucumber-reports.json',
-                      trendsLimit: 10,
-                      classifications: [
-                          [
-                              'key': 'Browser',
-                              'value': 'Chrome'
-                          ]
-                      ]
-            }
-        }
     }
 }
