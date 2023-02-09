@@ -34,7 +34,7 @@ pipeline {
             always {
          cucumber buildStatus: 'UNSTABLE',
                  reportTitle: 'My report',
-                 fileIncludePattern: '**/*.html',
+                 fileIncludePattern: 'target/cucumber-reports.html',
                  trendsLimit: 10,
                  classifications: [
                      [
