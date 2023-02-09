@@ -33,8 +33,8 @@ pipeline {
     post {
             always {
          cucumber buildStatus: 'UNSTABLE',
-                 reportTitle: 'My report',
-                 fileIncludePattern: 'target/cucumber-reports.json',
+                 reportTitle: 'My report cucumber',
+                 fileIncludePattern: '**/*.json',
                  trendsLimit: 10,
                  classifications: [
                      [
