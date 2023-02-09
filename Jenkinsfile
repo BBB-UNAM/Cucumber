@@ -29,4 +29,11 @@ pipeline {
             }
         }
     }
+
+    post {
+            always {
+                cucumber 'target/cucumber-reports.json'
+            }
+    }
+
 }
