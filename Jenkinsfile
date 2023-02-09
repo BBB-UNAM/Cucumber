@@ -34,12 +34,12 @@ pipeline {
             always {
          cucumber buildStatus: 'UNSTABLE',
                  reportTitle: 'My report',
-                 fileIncludePattern: '**/*.json',
+                 fileIncludePattern: '**/*.html',
                  trendsLimit: 10,
                  classifications: [
                      [
                          'key': 'Browser',
-                         'value': 'Firefox'
+                         'value': 'Chrome'
                      ]
                  ]
             }
