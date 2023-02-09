@@ -30,6 +30,7 @@ pipeline {
         }
 
         stage('Generate HTML report') {
+            step  {
              cucumber buildStatus: 'UNSTABLE',
                       reportTitle: 'My report',
                       fileIncludePattern: 'target/cucumber-reports.json',
@@ -40,6 +41,7 @@ pipeline {
                               'value': 'Chrome'
                           ]
                       ]
+            }
         }
     }
 }
