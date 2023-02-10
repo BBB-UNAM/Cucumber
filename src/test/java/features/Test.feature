@@ -1,7 +1,7 @@
 Feature: Comics category
   As a user i want to lear jokes to have a fun momment
 
-  @ignore
+  #@ignore
   @testN1
   Scenario: Enter to comics category stating in the home page
     Given The user is in the home page
@@ -15,7 +15,7 @@ Feature: Comics category
     When user enters username as "puto el que lo lea" and password "admin1"
     Then User should be able to see an "invaid credential"
 
-  @ignore
+  #@ignore
   @testN3
   Scenario: With this scenario we going to test the function of cucumber tables
     Given I have a table with the below values
