@@ -32,17 +32,26 @@ pipeline {
 
     post {
             always {
-         cucumber buildStatus: 'UNSTABLE',
-                 reportTitle: 'My report cucumber',
-                 fileIncludePattern: '**/*.json',
-                 trendsLimit: 10,
-                 classifications: [
-                     [
-                         'key': 'Browser',
-                         'value': 'Chrome'
-                     ]
-                 ]
-         }
+                 cucumber buildStatus: 'UNSTABLE',
+                         reportTitle: 'My report cucumber',
+                         fileIncludePattern: '**/*.json',
+                         trendsLimit: 10,
+                         classifications: [
+                             [
+                                 'key': 'Browser',
+                                 'value': 'Chrome'
+                             ]
+                         ]
+                 publishHTML (target : [allowMissing: false,
+                  alwaysLinkToLastBuild: true,
+                  keepAll: true,
+                  reportDir: 'reports',
+                  reportFiles: 'myreport.html',
+                  reportName: 'My Reports',
+                  reportTitles: 'The Report'])
+                  reportDir: 'target/cucumber-reports.html'
+            }
+
     }
 
 }
