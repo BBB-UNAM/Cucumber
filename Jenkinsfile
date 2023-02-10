@@ -45,6 +45,7 @@ pipeline {
                 publishHTML (target : [allowMissing: false,
                  alwaysLinkToLastBuild: true,
                  reportDir: 'target/',
+                 includes: '**/*.png',
                  keepAll: true,
                  reportDir: 'reports',
                  reportFiles: 'cucumber-reports.html',
