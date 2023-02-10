@@ -42,7 +42,14 @@ pipeline {
                                  'value': 'Chrome'
                              ]
                          ]
-
+                publishHTML (target : [allowMissing: false,
+                 alwaysLinkToLastBuild: true,
+                 reportDir: 'target/cucumber-reports.html',
+                 keepAll: true,
+                 reportDir: 'reports',
+                 reportFiles: 'myreport.html',
+                 reportName: 'My Reports',
+                 reportTitles: 'The Report'])
             }
 
     }
